@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "Cidade em Foco",
+    "slug": "cidade-em-foco",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#0b5d4b"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "br.gov.cidadeemfoco.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "O Cidade em Foco utiliza sua localização para posicionar ocorrências urbanas no mapa e mostrar relatos próximos.",
+        "NSCameraUsageDescription": "O Cidade em Foco utiliza a câmera para anexar até 5 fotos do problema urbano."
+      }
+    },
+    "android": {
+      "package": "br.gov.cidadeemfoco.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0b5d4b"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Permitir que o Cidade em Foco acesse sua localização para identificar o endereço da solicitação."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permitir que o Cidade em Foco acesse suas fotos para anexar imagens da ocorrência."
+        }
+      ]
+    ]
+  }
+}

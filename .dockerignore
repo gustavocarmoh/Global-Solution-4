@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+**/coverage
+**/*.tsbuildinfo
+.git
+.env
+apps/api/uploads
+apps/mobile/.expo
+apps/web/test-results
+apps/web/playwright-report

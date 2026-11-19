@@ -1,0 +1,29 @@
+{
+  "name": "cidade-em-foco",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma Integrada de Serviços Municipais, Zeladoria Urbana e Participação Cidadã",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@cidade-em-foco/shared && npm run build --workspace=@cidade-em-foco/api && npm run build --workspace=@cidade-em-foco/web",
+    "dev:api": "npm run start:dev --workspace=@cidade-em-foco/api",
+    "dev:web": "npm run dev --workspace=@cidade-em-foco/web",
+    "dev:mobile": "npm run start --workspace=@cidade-em-foco/mobile",
+    "db:migrate": "npm run migration:run --workspace=@cidade-em-foco/api",
+    "db:seed": "npm run seed --workspace=@cidade-em-foco/api",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "infra:up": "docker compose up -d postgres minio mailpit",
+    "infra:down": "docker compose down",
+    "test:e2e": "npm run test:e2e --workspace=@cidade-em-foco/api",
+    "test:e2e:web": "npm run test:e2e --workspace=@cidade-em-foco/web",
+    "test:e2e:mobile": "npm run test:e2e --workspace=@cidade-em-foco/mobile",
+    "db:seed:users": "npm run seed:users --workspace=@cidade-em-foco/api"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
