@@ -121,9 +121,3 @@ Observações:
 - Login e cadastro têm limite de 10 tentativas por minuto por IP. Para rodar as suítes de navegador, defina `RATE_LIMIT_DISABLED=true` no `.env` e recrie a API (`docker compose up -d api`); remova depois. Com o Docker Desktop no Windows e o shell no WSL, variáveis só chegam ao compose pelo `.env`. Ignorado em produção.
 - A auditoria de acessibilidade roda em JSDOM e **não avalia contraste de cor**; isso deve ser conferido em navegador real (Lighthouse ou axe DevTools).
 - O app mobile é testado pela variante Expo Web, que compartilha telas e acesso à API com Android/iOS. O mapa nativo (`react-native-maps`) e o seletor de fotos do aparelho só podem ser conferidos em um dispositivo ou emulador. `npm run export:android --workspace=@cidade-em-foco/mobile` valida que o bundle nativo compila.
-
-## 7. Documentação complementar
-
-- [Decisões de arquitetura e produto](docs/DECISOES.md)
-- [Referência da API](docs/API.md)
-- [Usuários do seed e permissões por perfil](docs/USUARIOS-SEED.md)
